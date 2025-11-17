@@ -1,0 +1,27 @@
+# Vim swap files
+*.swp
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+env/
+venv/
+miniconda3/
+
+# Build / packaging
+build/
+*egg-info/
+*egg.info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-specific files
+.DS_Store
+
+# Installer / miscellaneous files
+Miniconda3-latest-MacOSX-x86_64.sh
+
