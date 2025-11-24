@@ -39,13 +39,17 @@ def read_xyz(filename):
     return atoms
 
 
-def write_xyz(filename, atoms, comment="Written by molecule_project"):
+def write_xyz(filename, atoms, comment="Written by python_molecule_project"):
     """
     Write an XYZ file from a list of Atom objects.
     """
+    # If you need RHF here, import inside the function
+    # from pybest.wrappers import RHF
+
     with open(filename, "w") as f:
         f.write(f"{len(atoms)}\n")
         f.write(comment + "\n")
         for atom in atoms:
             x, y, z = atom.coords
             f.write(f"{atom.symbol} {x:.6f} {y:.6f} {z:.6f}\n")
+
