@@ -1,1 +1,27 @@
+[project]
+name = "molecules"
+version = "0.0.1"
+description = "My awsome Python project."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["h5py", "numpy"]
+authors = [
+    {name = "Zahra Karimi", email = "karimi369@gmail.com"},
+]
+
+[build-system]
+requires = [
+	"scikit-build-core",
+	"pybind11-global",
+	"cmake",
+	"wheel",
+]
+build-backend = "scikit_build_core.build"
+
+[tool.scikit-build]
+wheel.expand-macos-universal-tags = true
+cmake.minimum-version = "4.0"
+
+[tool.scikit-build.sdist]
+include = [".cpp", "*.h", "CMakeLists.txt", "molecules/**"]
 
